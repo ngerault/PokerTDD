@@ -21,4 +21,6 @@ def combinaison(cards):
     tri = sorted(card.value for card in cards)
     if tri[0] == tri[1]-1 == tri[2]-2 == tri[3]-3 == tri[4]-4:
         return 40
+    if cards[0].return_suit() == cards[2].return_suit() == cards[3].return_suit() == cards[3].return_suit():
+        return 45
     return None
