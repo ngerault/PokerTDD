@@ -1,3 +1,6 @@
+from collections import Counter
+
+
 class Card:
     def __init__(self, value, suit):
         self.value = value
@@ -10,7 +13,7 @@ class Card:
         return self.suit
 
 def combinaison(cards):
-    for _ in cards:
-        if cards[0].value == cards[1].value == cards[2].value:
-            return 30
+    occurrences = Counter([card.value for card in cards])
+    if occurrences.most_common(1)[0][1] == 3:
+        return 30
     return None
