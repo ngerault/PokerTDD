@@ -79,3 +79,12 @@ def test_should_return_best_card():
     card5 = Card(4, "Pique")
     main = [card1, card2, card3, card4, card5]
     assert combinaison(main) == 12
+
+def test_should_return_full_points():
+    card1 = Card(2, "Pique")
+    card2 = Card(2, "Carreau")
+    card3 = Card(3, "Carreau")
+    card4 = Card(3, "Trèfle")
+    card5 = Card(3, "Pique")
+    main = [card1, card2, card3, card4, card5]
+    assert combinaison(main) == 50
