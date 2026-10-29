@@ -8,3 +8,9 @@ class Card:
 
     def return_suit(self):
         return self.suit
+
+def combinaison(cards):
+    for _ in cards:
+        if cards[0].value == cards[1].value == cards[2].value:
+            return 30
+    return None
