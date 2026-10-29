@@ -43,3 +43,12 @@ def test_should_return_suite_points():
     card5 = Card(6, "Trèfle")
     main = [card1, card2, card3, card4, card5]
     assert combinaison(main) == 40
+
+def test_should_return_suite_points_without_order():
+    card1 = Card(2, "Pique")
+    card2 = Card(4, "Coeur")
+    card3 = Card(6, "Carreau")
+    card4 = Card(5, "Trèfle")
+    card5 = Card(3, "Trèfle")
+    main = [card1, card2, card3, card4, card5]
+    assert combinaison(main) == 40

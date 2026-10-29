@@ -18,8 +18,7 @@ def combinaison(cards):
         return 60
     if occurrences.most_common(1)[0][1] == 3:
         return 30
-    for _ in cards:
-        if cards[0].value == cards[1].value-1 == cards[2].value-2 == cards[3].value-3 == cards[4].value-4:
-            return 40
-
+    tri = sorted(card.value for card in cards)
+    if tri[0] == tri[1]-1 == tri[2]-2 == tri[3]-3 == tri[4]-4:
+        return 40
     return None
