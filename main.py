@@ -14,8 +14,12 @@ class Card:
 
 def combinaison(cards):
     occurrences = Counter([card.value for card in cards])
-    if occurrences.most_common(1)[0][1] == 3:
-        return 30
     if occurrences.most_common(1)[0][1] == 4:
         return 60
+    if occurrences.most_common(1)[0][1] == 3:
+        return 30
+    for _ in cards:
+        if cards[0].value == cards[1].value-1 == cards[2].value-2 == cards[3].value-3 == cards[4].value-4:
+            return 40
+
     return None
