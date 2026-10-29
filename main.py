@@ -24,4 +24,4 @@ def combinaison(cards):
     occurrences_color = Counter([card.suit for card in cards])
     if occurrences_color.most_common(1)[0][1] == 4:
         return 45
-    return None
+    return tri[4]

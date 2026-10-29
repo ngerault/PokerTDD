@@ -70,3 +70,12 @@ def test_should_return_color_points_without_order():
     card5 = Card(4, "Pique")
     main = [card1, card2, card3, card4, card5]
     assert combinaison(main) == 45
+
+def test_should_return_best_card():
+    card1 = Card(3, "Trèfle")
+    card2 = Card(8, "Carreau")
+    card3 = Card(12, "Pique")
+    card4 = Card(10, "Coeur")
+    card5 = Card(4, "Pique")
+    main = [card1, card2, card3, card4, card5]
+    assert combinaison(main) == 12
