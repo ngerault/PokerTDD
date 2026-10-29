@@ -16,4 +16,6 @@ def combinaison(cards):
     occurrences = Counter([card.value for card in cards])
     if occurrences.most_common(1)[0][1] == 3:
         return 30
+    if occurrences.most_common(1)[0][1] == 4:
+        return 60
     return None

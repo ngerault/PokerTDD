@@ -25,3 +25,12 @@ def test_should_return_brelan_points_with_3_first_cards():
     card5 = Card(2, "Trèfle")
     main = [card1, card2, card3, card4, card5]
     assert combinaison(main) == 30
+
+def test_should_return_carre_points():
+    card1 = Card(2, "Pique")
+    card2 = Card(2, "Coeur")
+    card3 = Card(2, "Carreau")
+    card4 = Card(2, "Trèfle")
+    card5 = Card(4, "Trèfle")
+    main = [card1, card2, card3, card4, card5]
+    assert combinaison(main) == 60
